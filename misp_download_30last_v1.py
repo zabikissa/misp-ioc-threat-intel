@@ -13,13 +13,13 @@ verifycert = os.getenv("MISP_VERIFYCERT", "False").lower() in ["true", "1", "yes
 if not url or not key:
     raise ValueError("❌ Veuillez définir MISP_URL et MISP_KEY dans .env")
 
-print(f"🌐 Connexion à MISP sur {url} (verifycert={verifycert})")
+print(f" Connexion à MISP sur {url} (verifycert={verifycert})")
 
 misp = PyMISP(url, key, verifycert)
 
 NB_EVENTS = 30
 
-print("📥 Téléchargement des événements avec attributs...")
+print(" Téléchargement des événements avec attributs...")
 
 events = misp.search(
     controller="events",
@@ -60,4 +60,4 @@ output_file = f"ioc_last_{NB_EVENTS}_events_{timestamp}.csv"
 
 df.to_csv(output_file, index=False)
 
-print(f"✅ Export terminé : {output_file} ({len(df)} IOC)")
+print(f" Export terminé : {output_file} ({len(df)} IOC)")
