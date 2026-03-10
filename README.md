@@ -48,7 +48,7 @@ Example:
 
 0 8 * * * $HOME/misp-ioc-threat-intel/run.sh >> $HOME/misp-ioc-threat-intel/cron.log 2>&1
 
-⚠️ Replace path if project installed elsewhere.
+Replace path if project installed elsewhere.
 
 ## Use case
 
