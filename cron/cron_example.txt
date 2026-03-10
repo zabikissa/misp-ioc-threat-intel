@@ -1,0 +1,1 @@
+0 8 * * * /home/user/misp-ioc-threat-intel/run.sh >> cron.log 2>&1
