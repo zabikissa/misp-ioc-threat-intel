@@ -1,55 +1,125 @@
-# MISP IOC Threat Intel Automation
+# MISP IOC Threat Intelligence Automation
 
-Projet de veille cyber automatisée utilisant MISP API.
+Projet de veille cyber automatisée utilisant l'API MISP pour extraire les IOC (Indicators of Compromise) et générer des fichiers exploitables pour un SOC / SIEM.
 
-Fonctionnalités :
+## Features
 
-- Extraction des IOC
+- Connexion API MISP
+- Extraction automatique des IOC
 - Export CSV
 - Filtrage TLP
-- Automatisation cron
-- Compatible SOC / SIEM
+- Automatisation via cron
+- Compatible SOC / SIEM / Threat Intel
 
-Installation
+## Requirements
+
+- Linux / Ubuntu
+- Python 3.9+
+- Accès API MISP
+- Git
+
+## Installation
+
+Clone repository:
 
 git clone https://github.com/USER/misp-ioc-threat-intel.git
+
 cd misp-ioc-threat-intel
+
+Run setup:
 
 bash setup.sh
 
-Modifier .env
+Edit configuration:
+
+nano .env
+
+Run script:
 
 bash run.sh
 
-Automatisation
+## Cron automation
+
+Edit crontab:
 
 crontab -e
 
-0 8 * * * /home/user/misp-ioc-threat-intel/run.sh >> cron.log 2>&1# MISP IOC Threat Intel Automation
+Example:
 
-Projet de veille cyber automatisée utilisant MISP API.
+0 8 * * * $HOME/misp-ioc-threat-intel/run.sh >> $HOME/misp-ioc-threat-intel/cron.log 2>&1
 
-Fonctionnalités :
+⚠️ Replace path if project installed elsewhere.
 
-- Extraction des IOC
+## Use case
+
+- SOC monitoring
+- Threat intelligence
+- SIEM feed
+- Cyber threat monitoring
+- IOC collection
+
+## Author
+
+Cybersecurity lab project – MISP Threat Intelligence automation# MISP IOC Threat Intelligence Automation
+
+Projet de veille cyber automatisée utilisant l'API MISP pour extraire les IOC (Indicators of Compromise) et générer des fichiers exploitables pour un SOC / SIEM.
+
+## Features
+
+- Connexion API MISP
+- Extraction automatique des IOC
 - Export CSV
 - Filtrage TLP
-- Automatisation cron
-- Compatible SOC / SIEM
+- Automatisation via cron
+- Compatible SOC / SIEM / Threat Intel
 
-Installation
+## Requirements
+
+- Linux / Ubuntu
+- Python 3.9+
+- Accès API MISP
+- Git
+
+## Installation
+
+Clone repository:
 
 git clone https://github.com/USER/misp-ioc-threat-intel.git
+
 cd misp-ioc-threat-intel
+
+Run setup:
 
 bash setup.sh
 
-Modifier .env
+Edit configuration:
+
+nano .env
+
+Run script:
 
 bash run.sh
 
-Automatisation
+## Cron automation
+
+Edit crontab:
 
 crontab -e
 
-0 8 * * * /home/user/misp-ioc-threat-intel/run.sh >> cron.log 2>&1
+Example:
+
+0 8 * * * $HOME/misp-ioc-threat-intel/run.sh >> $HOME/misp-ioc-threat-intel/cron.log 2>&1
+
+⚠️ Replace path if project installed elsewhere.
+
+## Use case
+
+- SOC monitoring
+- Threat intelligence
+- SIEM feed
+- Cyber threat monitoring
+- IOC collection
+
+## Author
+
+Cybersecurity lab project – MISP Threat Intelligence automation
